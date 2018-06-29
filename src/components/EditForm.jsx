@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './editform.css';
+import PropTypes from 'prop-types';
 
 export default function EditForm(props){
   return(
@@ -32,4 +33,7 @@ export default function EditForm(props){
     </div>
 </div>
   )
+  EditForm.PropTypes = {
+    handleClick: PropTypes.func
+  }
 }

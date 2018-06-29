@@ -38,6 +38,11 @@ a {
   color:white;
 }
 
+.headerLinks li:hover{
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
 .headerLogo img {
   max-height: 120px;
 }
