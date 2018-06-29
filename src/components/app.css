@@ -1,5 +1,14 @@
+.app-background {
+    background-image: url('./../assets/images/beerbackground.jpg');
+    background-attachment: fixed;
+    z-index: -1;
+    width: 100%;
+}
+
 .app-wrapper {
+
   margin: auto;
   width: 1024px;
+  font-family: Helvetica, sans-serif;
 
 }
