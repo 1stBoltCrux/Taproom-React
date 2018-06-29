@@ -1,10 +1,10 @@
-.header-wrapper ul{
+.headerWrapper ul{
   margin: 0;
   list-style: none;
   padding: 0;
 }
 
-.header-wrapper {
+.headerWrapper {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -19,7 +19,7 @@
 
 }
 
-.header-links li {
+.headerLinks li {
   height: 40px;
   display: flex;
   align-items: center;
@@ -33,6 +33,6 @@
   color:white;
 }
 
-.header-logo img {
+.headerLogo img {
   max-height: 120px;
 }
