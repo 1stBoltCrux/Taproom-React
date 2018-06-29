@@ -3,6 +3,8 @@ import './keg.css';
 import SellButton from './SellButton.jsx';
 import EditKeg from './EditKeg.jsx';
 import PropTypes from 'prop-types';
+import styles from './keg.css';
+console.log(styles);
 
 export default function Keg(props){
   return(
