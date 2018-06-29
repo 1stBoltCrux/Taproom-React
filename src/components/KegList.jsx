@@ -1,5 +1,5 @@
 import React from 'react';
-import './keglist.css';
+import styles from './keglist.css';
 import Keg from './Keg.jsx';
 
 export default function KegList(){
@@ -58,7 +58,7 @@ export default function KegList(){
 }
 
   return(
-    <div className='keg-list-wrapper'>
+    <div className={styles.kegListWrapper}>
       {state.masterKegList.map((keg, index) =>
         <Keg
         name={keg.name}

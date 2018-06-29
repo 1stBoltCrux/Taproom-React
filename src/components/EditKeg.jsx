@@ -1,10 +1,10 @@
 import React from 'react';
-import './editkeg.css';
+import styles from './editkeg.css';
 
 export default function EditKeg(){
   return(
     <div className='edit-keg-wrapper'>
-      <div className='edit-button'>
+      <div className={styles.editButton}>
         <p>Edit</p>
       </div>
 

@@ -1,4 +1,4 @@
-.keg-wrapper ul {
+.kegWrapper ul {
   list-style: none;
   display: flex;
   margin: 0 0 20px 0;
@@ -8,7 +8,7 @@
 
 }
 
-.keg-wrapper li {
+.kegWrapper li {
   margin-left: 20px;
   width: 120px;
   max-height: 80px;
@@ -16,21 +16,22 @@
   padding: 0;
 }
 
-.keg-content ul {
+.kegContent ul {
   background-color: #9cb28e;
   display: flex;
   align-items: center;
   padding: 5px;
 }
 
-.keg-wrapper {
+.kegWrapper {
   margin: 40px;
   box-shadow: 3px 3px 4px rgba(0,0,0, .5);
   border-radius: 10px;
   overflow: hidden;
+  color: white;
 }
 
-.keg-card {
+.kegCard {
   box-sizing: border-box;
   padding: 20px;
   display: flex;
@@ -40,7 +41,7 @@
   background-color: #a5bc96
 }
 
-.keg-content {
+.kegContent {
   height: 70%;
   padding-top: 30px;
   box-sizing: border-box;
@@ -51,7 +52,7 @@
   font-size: 1.2rem;
 }
 
-.keg-buttons {
+.kegButtons {
   position: relative;
   top: 40px;
 display: flex;

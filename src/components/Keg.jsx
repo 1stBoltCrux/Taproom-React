@@ -8,29 +8,29 @@ console.log(styles);
 
 export default function Keg(props){
   return(
-    <div className='keg-wrapper'>
-      <div className='keg-card'>
-        <div className='keg-content'>
-          <div className='name-brewer'>
+    <div className={styles.kegWrapper}>
+      <div className={styles.kegCard}>
+        <div className={styles.kegContent}>
+          <div>
             <ul>
-              <li>Name:<span className='emphasis'>{props.name}</span></li>
-              <li>Brewed by: <span className='emphasis'>{props.brewer}</span></li>
+              <li>Name:<span className={styles.emphasis}>{props.name}</span></li>
+              <li>Brewed by: <span className={styles.emphasis}>{props.brewer}</span></li>
             </ul>
           </div>
-          <div className='description-abv'>
+          <div>
             <ul>
-              <li>Description: <span className='emphasis'>{props.description}</span></li>
-              <li>ABV: <span className='emphasis'> {props.abv}</span></li>
+              <li>Description: <span className={styles.emphasis}>{props.description}</span></li>
+              <li>ABV: <span className={styles.emphasis}> {props.abv}</span></li>
             </ul>
           </div>
-          <div className='price-remaining'>
+          <div>
             <ul>
-              <li><span className='emphasis'>${props.price}</span></li>
-              <li>Pints Remaining: <span className='emphasis'>{props.remaining} </span></li>
+              <li><span className={styles.emphasis}>${props.price}</span></li>
+              <li>Pints Remaining: <span className={styles.emphasis}>{props.remaining} </span></li>
             </ul>
             </div>
         </div>
-          <div className='keg-buttons'>
+          <div className={styles.kegButtons}>
             <ul>
               <li><SellButton/></li>
               <li><EditKeg/></li>

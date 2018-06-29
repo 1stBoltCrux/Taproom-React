@@ -1,12 +1,12 @@
 import React from 'react';
-import './addkeg.css';
+import styles from './addkeg.css';
 
 export default function AddKeg(){
   return(
-    <div className='add-keg-wrapper'>
-        <div className='keg-card'>
+    <div className={styles.addKegWrapper}>
+        <div className={styles.kegCard}>
           <h3>Add a New Keg</h3>
-          <div className='keg-content'>
+          <div className={styles.kegContent}>
             <div className='name-brewer'>
               <ul>
                 <li>Beer Name: <input type='text'/></li>
@@ -26,7 +26,7 @@ export default function AddKeg(){
               </ul>
               </div>
           </div>
-      <div className='add-keg-button'>
+      <div className={styles.addKegButton}>
         <p>Add a New Keg</p>
       </div>
     </div>

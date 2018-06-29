@@ -1,8 +1,8 @@
-.add-keg-button {
+.addKegButton {
   color: white;
 }
 
-.add-keg-wrapper ul {
+.addKegWrapper ul {
   list-style: none;
   display: flex;
   margin: 0 0 20px 0;
@@ -12,7 +12,7 @@
 
 }
 
-.add-keg-wrapper {
+.addKegWrapper {
   margin: 40px;
   box-shadow: 3px 3px 4px rgba(0,0,0, .5);
   border-radius: 10px;
@@ -20,18 +20,18 @@
   width: 400px;
 }
 
-.add-keg-wrapper li {
+.addKegWrapper li {
   margin-left: 20px;
   width: 100px;
   margin: 0 0 20px 20px;
   padding: 0;
 }
 
-.add-keg-wrapper input {
+.addKegWrapper input {
   width: 100%;
 }
 
-.add-keg-button {
+.addKegButton {
   height: 50px;
   border: 1px solid gray;
   border-radius: 5px;
@@ -41,6 +41,23 @@
   box-shadow: 2px 2px 4px rgba(0,0,0, .5);
 }
 
-.add-keg-wrapper h3 {
+.addKegWrapper h3 {
   margin: auto;
+}
+
+.kegCard {
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 100%;
+  background-color: #a5bc96
+}
+
+.kegContent ul {
+  background-color: #9cb28e;
+  display: flex;
+  align-items: center;
+  padding: 5px;
 }

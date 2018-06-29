@@ -1,16 +1,16 @@
-a {
+.app-wrapper a {
   text-decoration: none;
   color: white;
 }
 
-.app-background {
+.appBackground{
     background-image: url('./../assets/images/beerbackground.jpg');
     background-attachment: fixed;
     z-index: -1;
     width: 100%;
 }
 
-.app-wrapper {
+.appWrapper {
   padding: 20px;
   margin: auto;
   width: 1024px;
