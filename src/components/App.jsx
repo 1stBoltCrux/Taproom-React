@@ -6,6 +6,7 @@ import KegList from './KegList.jsx';
 import AddKeg from './AddKeg.jsx';
 
 
+
 function App(){
   return (
     <div className='app-background'>
@@ -13,6 +14,7 @@ function App(){
         <Header/>
         <Switch>
           <Route exact path='/keglist' component={KegList}/>
+          <Route exact path='/addkeg' component={AddKeg}/>
         </Switch>
       </div>
 

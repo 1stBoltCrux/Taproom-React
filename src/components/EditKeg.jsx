@@ -7,6 +7,7 @@ export default function EditKeg(){
       <div className='edit-button'>
         <p>Edit</p>
       </div>
+
     </div>
   )
 }

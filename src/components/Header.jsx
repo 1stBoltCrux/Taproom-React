@@ -1,6 +1,7 @@
 import React from 'react';
 import './header.css';
 import logo from './../assets/images/logo.png'
+import {Link} from 'react-router-dom';
 
 export default function Header(){
   return(
@@ -10,8 +11,8 @@ export default function Header(){
       </div>
       <div className='header-links'>
         <ul>
-          <li>View Our Selection</li>
-          <li>Add a New Keg</li>
+          <Link to='/keglist'><li>View Our Selection</li></Link>
+          <Link to='/addkeg'><li>Add a New Keg</li></Link>
         </ul>
       </div>
 
