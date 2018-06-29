@@ -9,8 +9,9 @@ import AddKeg from './AddKeg.jsx';
 function App(){
   return (
     <div className='app-wrapper'>
-      <Header/>
-      <KegList/>
+      <Header/><Switch>
+        <Route exact path='/keglist' component={KegList}/>
+      </Switch>
     </div>
 
   );
