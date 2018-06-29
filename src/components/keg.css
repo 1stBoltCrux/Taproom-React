@@ -1,0 +1,42 @@
+.keg-wrapper ul {
+  list-style: none;
+  display: flex;
+  margin: 0 0 20px 0;
+  padding: 0;
+  justify-content: center;
+  height: 80px;
+}
+
+.keg-wrapper li {
+  margin-left: 20px;
+  width: 100px;
+  margin: 0 0 20px 20px;
+  padding: 0;
+}
+
+.keg-card {
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  width: 400px;
+  height: 100%;
+}
+
+.keg-content {
+  height: 70%;
+}
+
+.emphasis {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.keg-buttons {
+display: flex;
+justify-content: center;
+height: 30%;
+
+
+}

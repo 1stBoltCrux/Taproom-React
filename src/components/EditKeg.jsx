@@ -4,7 +4,9 @@ import './editkeg.css';
 export default function EditKeg(){
   return(
     <div className='edit-keg-wrapper'>
-      <p>EditKeg is working.</p>
+      <div className='edit-button'>
+        <p>Edit</p>
+      </div>
     </div>
   )
 }

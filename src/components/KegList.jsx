@@ -59,7 +59,6 @@ export default function KegList(){
 
   return(
     <div className='keg-list-wrapper'>
-      <p>KegList is working.</p>
       {state.masterKegList.map((keg, index) =>
         <Keg
         name={keg.name}
