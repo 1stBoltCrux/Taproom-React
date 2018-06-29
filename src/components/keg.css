@@ -3,7 +3,7 @@
   display: flex;
   margin: 0 0 20px 0;
   padding: 0;
-  justify-content: center;
+  justify-content: space-around;
   height: 80px;
 }
 
@@ -34,6 +34,8 @@
 }
 
 .keg-buttons {
+  position: relative;
+  top: 40px;
 display: flex;
 justify-content: center;
 height: 30%;

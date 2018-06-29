@@ -1,0 +1,32 @@
+.header-wrapper ul{
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #bcd3ad;
+}
+
+.header-links li {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #e68e2a;
+  box-shadow: 2px 2px 4px rgba(0,0,0, 0.5);
+}
+
+.header-logo img {
+  max-height: 100px;
+}
