@@ -37,6 +37,7 @@ N/A
 
 * HTML
 * CSS
+* CSS Modules
 * JavaScript
 * React.JS
 * Node

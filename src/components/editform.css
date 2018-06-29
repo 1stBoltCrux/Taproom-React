@@ -23,7 +23,15 @@
   overflow: hidden;
   width: 400px;
   border: 2px solid white;
-
+  animation: fadeIn .2s linear;
+}
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 .addKegWrapper li {
