@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './editkeg.css';
+import EditForm from './EditForm.jsx'
 
 export default class EditKeg extends React.Component {
   constructor(props){
@@ -19,7 +20,7 @@ export default class EditKeg extends React.Component {
   render(){
     let visibleContent = null;
     if (this.state.formVisible) {
-      visibleContent = 'hooplah';
+      visibleContent = <EditForm handleClick={this.handleClick}/>;
     } else {
       visibleContent = null;
     }
