@@ -10,6 +10,10 @@ This is a copy/update of the Taproom project done in React.js.
 
 This app will allow the user to view a list of the taproom's kegs, sell pints from those kegs as well as add new kegs and edit existing ones.
 
+### React vs Angular
+
+I have definitely found React's data-flow structure to be a lot more forgiving than Angular's. Passing props just seems simpler, more intuitive and less verbose. Everything also feels a lot more contained, especially in that when you're working on a single component, basically everything pertaining to that component is right in front of you. There's no tabbing back and forth between template and js files.
+
 ## App Component Structure
 
 <img src='./src/assets/images/structure.jpg'/>
