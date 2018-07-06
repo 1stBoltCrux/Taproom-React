@@ -12,7 +12,7 @@
   margin-left: 20px;
   width: 120px;
   max-height: 80px;
-  margin: 0 0 10px 20px;
+  margin: 0 0 5px 20px;
   padding: 0;
 }
 
@@ -58,4 +58,20 @@
 display: flex;
 justify-content: center;
 height: 30%;
+}
+
+.brewedBy, .kegName{
+  display: flex;
+  justify-content: center;
+}
+
+.kegName {
+  padding: 5px;
+}
+.line {
+  height: 1px;
+  width: 90%;
+  background-color: rgba(255,255,255, .5);
+  margin: auto;
+
 }

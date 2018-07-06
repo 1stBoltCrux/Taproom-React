@@ -12,7 +12,7 @@ export default function Header(){
       </div>
       <div className={styles.headerLinks}>
         <ul>
-          <Link to='/keglist'><li>View Our Selection</li></Link>
+          <Link to='/'><li>View Our Selection</li></Link>
           <Link to='/addkeg'><li>Add a New Keg</li></Link>
         </ul>
       </div>

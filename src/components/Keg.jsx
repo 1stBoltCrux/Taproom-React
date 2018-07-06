@@ -21,13 +21,16 @@ export default function Keg(props){
   return(
     <div className={styles.kegWrapper}>
       <div className={styles.kegCard}>
+        <div className={styles.kegName}>
+          <h2>{props.name}</h2>
+        </div>
+        <div className={styles.line}></div>
+        <div className={styles.brewedBy}>
+            <h3>Brewed by: <span className={styles.emphasis}>{props.brewer}</span></h3>
+        </div>
+
         <div className={styles.kegContent}>
-          <div>
-            <ul>
-              <li>Name:<span className={styles.emphasis}>{props.name}</span></li>
-              <li>Brewed by: <span className={styles.emphasis}>{props.brewer}</span></li>
-            </ul>
-          </div>
+
           <div>
             <ul>
               <li>Description: <span className={styles.emphasis}>{props.description}</span></li>

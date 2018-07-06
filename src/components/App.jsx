@@ -82,7 +82,6 @@ class App extends React.Component {
   }
 
   handleNewKeg(newKeg){
-    console.log(newKeg);
     let newMasterKegList = this.state.masterKegList.slice();
     newMasterKegList.push(newKeg);
     this.setState({masterKegList: newMasterKegList});
@@ -101,7 +100,6 @@ class App extends React.Component {
   }
 
   handleSubmitEditForm(newEdit) {
-    console.log(newEdit);
     let newMasterKegList = this.state.masterKegList.slice();
     for (let i = 0; i < newMasterKegList.length; i++) {
       console.log(newMasterKegList[i]);
@@ -130,7 +128,7 @@ class App extends React.Component {
         <div className={styles.appWrapper}>
           <Header/>
           <Switch>
-            <Route exact path='/keglist' render={()=> <KegList          onHandleSubmitEditForm={this.handleSubmitEditForm}
+            <Route exact path='/' render={()=> <KegList          onHandleSubmitEditForm={this.handleSubmitEditForm}
               newMasterKegList={this.state.masterKegList}
               onHandleClick={this.handleClick}
               onSellPint={this.handleSellPint}/>}/>
