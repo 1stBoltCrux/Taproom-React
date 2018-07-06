@@ -7,6 +7,17 @@ import styles from './keg.css';
 
 
 export default function Keg(props){
+  console.log(props.remaining)
+
+  let warning = {
+    color: 'white'
+  }
+  if (props.remaining < 20) {
+    warning = {
+      color: 'red'
+    }
+  }
+
   return(
     <div className={styles.kegWrapper}>
       <div className={styles.kegCard}>
@@ -26,7 +37,7 @@ export default function Keg(props){
           <div>
             <ul>
               <li><span className={styles.emphasis}>${props.price}</span></li>
-              <li>Pints Remaining: <span className={styles.emphasis}>{props.remaining} </span></li>
+              <li>Pints Remaining: <span style={warning} className={styles.emphasis}>{props.remaining} </span></li>
             </ul>
           </div>
         </div>
@@ -47,6 +58,7 @@ export default function Keg(props){
           </ul>
         </div>
       </div>
+
     </div>
   );
   Keg.PropTypes = {
