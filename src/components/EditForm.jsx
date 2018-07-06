@@ -10,6 +10,17 @@ export default function EditForm(props){
   let _price = null;
   let _remaining = null;
 
+  function submitEdit(event){
+    event.preventDefault();
+    props.onHandleSubmitEditForm({name: _name.value, brewer: _brewer.value, description: _description.value, abv: _abv.value, price: _price.value, remaining: _remaining.value, id: props.kegId});
+    _name.value = '';
+    _brewer.value = '';
+    _description.value = '';
+    _abv.value = '';
+    _price.value = '';
+    _remaining.value = '';
+  }
+
   return(
     <div className={styles.addKegWrapper}>
       <div className={styles.kegCard}>
@@ -64,7 +75,7 @@ export default function EditForm(props){
             </ul>
           </div>
         </div>
-        <div onClick={() => props.onHandleSubmitEditForm(props.kegId)} className={styles.addKegButton}>
+        <div type='submit' onClick={submitEdit} className={styles.addKegButton}>
           <p>Edit the Keg</p>
         </div>
       </div>
