@@ -116,7 +116,7 @@ class App extends React.Component {
   handleSellPint(id){
     let newMasterKegList = this.state.masterKegList.slice();
     for (let i = 0; i < newMasterKegList.length; i++) {
-      if ( newMasterKegList[i].id === id) {
+      if ( newMasterKegList[i].id === id && newMasterKegList[i].remaining > 0) {
         newMasterKegList[i].remaining --;
         console.log(newMasterKegList[i].remaining);
         this.setState({masterKegList: newMasterKegList});
