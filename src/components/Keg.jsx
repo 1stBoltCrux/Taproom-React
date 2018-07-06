@@ -33,7 +33,7 @@ export default function Keg(props){
         <div className={styles.kegButtons}>
           <ul>
             <li><SellButton/></li>
-            <li><EditKeg onKegEdit={props.onKegEdit} passedState={props.passedState} onHandleClick={props.onHandleClick} formVisible={props.formVisible} kegId={props.kegId}/></li>
+            <li><EditKeg onHandleSubmitEditForm={props.onHandleSubmitEditForm} passedState={props.passedState} onHandleClick={props.onHandleClick} formVisible={props.formVisible} kegId={props.kegId}/></li>
           </ul>
 
         </div>

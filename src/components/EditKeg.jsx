@@ -17,7 +17,9 @@ export default function EditKeg(props) {
 
     let visibleContent = null;
     if (props.formVisible) {
-      visibleContent = <EditForm handleClick={this.handleClick}/>;
+      visibleContent = <EditForm onHandleClick={props.onHandleClick}
+      kegId={props.kegId}
+      onHandleSubmitEditForm={props.onHandleSubmitEditForm}/>;
     } else {
       visibleContent = null;
     }

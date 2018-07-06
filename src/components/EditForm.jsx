@@ -64,13 +64,13 @@ export default function EditForm(props){
             </ul>
           </div>
         </div>
-        <div onClick={props.handleClick} className={styles.addKegButton}>
-          <p>Add a New Keg</p>
+        <div onClick={() => props.onHandleSubmitEditForm(props.kegId)} className={styles.addKegButton}>
+          <p>Edit the Keg</p>
         </div>
       </div>
     </div>
   );
   EditForm.PropTypes = {
-    handleClick: PropTypes.func
+    onHandleClick: PropTypes.func
   };
 }

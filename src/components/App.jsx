@@ -78,8 +78,8 @@ class App extends React.Component {
 
     };
     this.handleNewKeg = this.handleNewKeg.bind(this);
-    this.handleEditKeg = this.handleEditKeg.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleSubmitEditForm = this.handleSubmitEditForm.bind(this);
   }
   handleNewKeg(newKeg){
     console.log(newKeg);
@@ -87,38 +87,37 @@ class App extends React.Component {
     newMasterKegList.push(newKeg);
     this.setState({masterKegList: newMasterKegList});
   }
-  handleEditKeg(newEdit){
-    console.log(newEdit);
-    let newMasterKegList = this.state.masterKegList.slice();
-    for (let i = 0; i < newMasterKegList.length; i++) {
-      if ( newMasterKegList[i].id === newEdit.id) {
-        newMasterKegList[i] = newEdit
-        this.setState({masterKegList: newMasterKegList});
-      } else {
-        return '';
-      }
-    }
-  }
+
+
   handleClick(id) {
-    console.log(id);
     let newMasterKegList = this.state.masterKegList.slice();
     for (let i = 0; i < newMasterKegList.length; i++) {
       console.log(newMasterKegList[i]);
-      if ( newMasterKegList[i].id === id) {
+      if ( newMasterKegList[i].id === id && newMasterKegList[i].formVisible === false) {
         newMasterKegList[i].formVisible = true;
         this.setState({masterKegList: newMasterKegList});
-      } else {
-        
       }
     }
   }
+
+  handleSubmitEditForm(id) {
+    let newMasterKegList = this.state.masterKegList.slice();
+    for (let i = 0; i < newMasterKegList.length; i++) {
+      console.log(newMasterKegList[i]);
+      if ( newMasterKegList[i].id === id && newMasterKegList[i].formVisible === true) {
+        newMasterKegList[i].formVisible = false;
+        this.setState({masterKegList: newMasterKegList});
+      }
+    }
+  }
+
   render(){
     return (
       <div className={styles.appBackground}>
         <div className={styles.appWrapper}>
           <Header/>
           <Switch>
-            <Route exact path='/keglist' render={()=> <KegList onEditKeg={this.handleEditKeg} passedState={this.state} onHandleClick={this.handleClick} />}/>
+            <Route exact path='/keglist' render={()=> <KegList onHandleSubmitEditForm={this.handleSubmitEditForm} passedState={this.state} onHandleClick={this.handleClick} />}/>
             <Route exact path='/addkeg' render={()=> <AddKeg onNewKeg={this.handleNewKeg}/>}/>
           </Switch>
         </div>

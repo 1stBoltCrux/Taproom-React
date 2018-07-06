@@ -17,7 +17,7 @@ export default function KegList(props) {
           formVisible={keg.formVisible}
           key={index}
           kegId={keg.id}
-          onKegEdit={props.onKegEdit}
+          onHandleSubmitEditForm={props.onHandleSubmitEditForm}
           passedState={props.passedState}
           onHandleClick={props.onHandleClick}/>
 
