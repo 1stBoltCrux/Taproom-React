@@ -63,8 +63,14 @@ class App extends React.Component {
         }
       ]
     }
+    this.handleNewKeg = this.handleNewKeg.bind(this);
   }
-
+  handleNewKeg(newKeg){
+    console.log(newKeg);
+    let newMasterKegList = this.state.masterKegList.slice();
+    newMasterKegList.push(newKeg);
+    this.setState({masterKegList: newMasterKegList});
+  }
 render(){
   return (
     <div className={styles.appBackground}>
@@ -72,7 +78,7 @@ render(){
         <Header/>
         <Switch>
           <Route exact path='/keglist' render={()=> <KegList passedState={this.state} />}/>
-          <Route exact path='/addkeg' component={AddKeg}/>
+          <Route exact path='/addkeg' render={()=> <AddKeg onNewKeg={this.handleNewKeg}/>}/>
         </Switch>
       </div>
     </div>
