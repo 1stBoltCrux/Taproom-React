@@ -12,7 +12,7 @@ export default function AddKeg(props){
 
   function handleNewKegFormSubmit(event){
     event.preventDefault();
-    props.onNewKeg({name: _name.value, brewer: _brewer.value, description: _description.value, abv: _abv.value, price: _price.value, remaining: _remaining.value, id: v4()});
+    props.onNewKeg({name: _name.value, brewer: _brewer.value, description: _description.value, abv: Math.abs(_abv.value) + '%', price: Math.abs(_price.value), remaining: Math.abs(_remaining.value), id: v4()});
     _name.value = '';
     _brewer.value = '';
     _description.value = '';
@@ -50,7 +50,7 @@ export default function AddKeg(props){
                 ref={(input) => {_description = input;}}/>
               </li>
               <li>ABV:<input
-                type='text'
+                type='number'
                 id='abv'
                 placeholder='Alcohol By Volume'
                 ref={(input) => {_abv = input;}}/>
@@ -60,13 +60,13 @@ export default function AddKeg(props){
           <div className='price-remaining'>
             <ul>
               <li>Price:<input
-                type='text'
+                type='number'
                 id='price'
                 placeholder='Price'
                 ref={(input) => {_price = input;}}/>
               </li>
               <li>Total Pints:<input
-                type='text'
+                type='number'
                 id='remaining'
                 placeholder='Total Pints'
                 ref={(input) => {_remaining = input;}}/>

@@ -12,7 +12,7 @@ export default function EditForm(props){
 
   function submitEdit(event){
     event.preventDefault();
-    props.onHandleSubmitEditForm({name: _name.value, brewer: _brewer.value, description: _description.value, abv: _abv.value, price: _price.value, remaining: _remaining.value, id: props.kegId});
+    props.onHandleSubmitEditForm({name: _name.value, brewer: _brewer.value, description: _description.value, abv: Math.abs(_abv.value) + '%', price: Math.abs(_price.value), remaining: Math.abs(_remaining.value), id: props.kegId});
     _name.value = '';
     _brewer.value = '';
     _description.value = '';
@@ -51,7 +51,7 @@ export default function EditForm(props){
                 ref={(input) => {_description = input;}}/>
               </li>
               <li>ABV:<input
-                type='text'
+                type='number'
                 id='abv'
                 placeholder={props.abv}
                 ref={(input) => {_abv = input;}}/>
@@ -61,13 +61,13 @@ export default function EditForm(props){
           <div className='price-remaining'>
             <ul>
               <li>Price:<input
-                type='text'
+                type='number'
                 id='price'
                 placeholder={props.price}
                 ref={(input) => {_price = input;}}/>
               </li>
               <li>Total Pints:<input
-                type='text'
+                type='number'
                 id='remaining'
                 placeholder={props.remaining}
                 ref={(input) => {_remaining = input;}}/>
