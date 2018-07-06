@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './editkeg.css';
 import EditForm from './EditForm.jsx';
+import PropTypes from 'prop-types';
 
 export default function EditKeg(props) {
 
@@ -30,4 +31,18 @@ export default function EditKeg(props) {
       </div>
     );
 
+}
+
+EditKeg.PropTypes = {
+  name: PropTypes.string,
+  brewer: PropTypes.string,
+  description: PropTypes.string,
+  abv: PropTypes.string,
+  price: PropTypes.string,
+  remaining: PropTypes.string,
+  formVisible: PropTypes.boolean,
+  key: PropTypes.string,
+  kegId: PropTypes.string,
+  onHandleSubmitEditForm: PropTypes.func,
+  onHandleClick: PropTypes.func,
 }

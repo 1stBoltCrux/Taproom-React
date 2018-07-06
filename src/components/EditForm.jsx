@@ -82,6 +82,16 @@ export default function EditForm(props){
     </div>
   );
   EditForm.PropTypes = {
-    onHandleClick: PropTypes.func
+    name: PropTypes.string,
+    brewer: PropTypes.string,
+    description: PropTypes.string,
+    abv: PropTypes.string,
+    price: PropTypes.string,
+    remaining: PropTypes.string,
+    formVisible: PropTypes.boolean,
+    key: PropTypes.string,
+    kegId: PropTypes.string,
+    onHandleSubmitEditForm: PropTypes.func,
+    onHandleClick: PropTypes.func,
   };
 }

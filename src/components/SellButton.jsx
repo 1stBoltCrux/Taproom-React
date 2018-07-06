@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './sellbutton.css';
+import PropTypes from 'prop-types';
 
 export default function SellButton(props){
   return(
@@ -7,4 +8,9 @@ export default function SellButton(props){
       <p>Sell a Pint</p>
     </div>
   );
+}
+
+SellButton.PropTypes = {
+  onSellPint: PropTypes.func,
+  kegId: PropTypes.string
 }

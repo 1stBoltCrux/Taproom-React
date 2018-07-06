@@ -131,7 +131,7 @@ class App extends React.Component {
           <Header/>
           <Switch>
             <Route exact path='/keglist' render={()=> <KegList          onHandleSubmitEditForm={this.handleSubmitEditForm}
-              passedState={this.state}
+              newMasterKegList={this.state.masterKegList}
               onHandleClick={this.handleClick}
               onSellPint={this.handleSellPint}/>}/>
             <Route exact path='/addkeg' render={()=> <AddKeg onNewKeg={this.handleNewKeg}/>}/>
