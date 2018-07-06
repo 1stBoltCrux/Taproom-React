@@ -7,7 +7,6 @@ import styles from './keg.css';
 
 
 export default function Keg(props){
-  console.log(props.remaining)
 
   let warning = {
     color: 'white'
@@ -26,11 +25,9 @@ export default function Keg(props){
         </div>
         <div className={styles.line}></div>
         <div className={styles.brewedBy}>
-            <h3>Brewed by: <span className={styles.emphasis}>{props.brewer}</span></h3>
+          <h3>Brewed by: <span className={styles.emphasis}>{props.brewer}</span></h3>
         </div>
-
         <div className={styles.kegContent}>
-
           <div>
             <ul>
               <li>Description: <span className={styles.emphasis}>{props.description}</span></li>
@@ -64,6 +61,7 @@ export default function Keg(props){
 
     </div>
   );
+  
   Keg.PropTypes = {
     name: PropTypes.string,
     brewer: PropTypes.string,

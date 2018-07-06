@@ -79,6 +79,7 @@ class App extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleSubmitEditForm = this.handleSubmitEditForm.bind(this);
     this.handleSellPint = this.handleSellPint.bind(this);
+    this.handleClear = this.handleClear.bind(this);
   }
 
   handleNewKeg(newKeg){
@@ -116,17 +117,21 @@ class App extends React.Component {
     for (let i = 0; i < newMasterKegList.length; i++) {
       if ( newMasterKegList[i].id === id && newMasterKegList[i].remaining > 0) {
         newMasterKegList[i].remaining --;
-        console.log(newMasterKegList[i].remaining);
         this.setState({masterKegList: newMasterKegList});
       }
     }
+  }
+
+  handleClear(){
+    let newMasterKegList = [];
+    this.setState({masterKegList: newMasterKegList})
   }
 
   render(){
     return (
       <div className={styles.appBackground}>
         <div className={styles.appWrapper}>
-          <Header/>
+          <Header onClear={this.handleClear}/>
           <Switch>
             <Route exact path='/' render={()=> <KegList          onHandleSubmitEditForm={this.handleSubmitEditForm}
               newMasterKegList={this.state.masterKegList}

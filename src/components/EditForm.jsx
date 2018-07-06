@@ -76,7 +76,7 @@ export default function EditForm(props){
           </div>
         </div>
         <div type='submit' onClick={submitEdit} className={styles.addKegButton}>
-          <p>Edit the Keg</p>
+          <p>Finish Editing</p>
         </div>
       </div>
     </div>

@@ -3,6 +3,8 @@ a {
   color: white;
 }
 
+
+
 .headerWrapper ul{
   margin: 0;
   list-style: none;
@@ -45,4 +47,33 @@ a {
 
 .headerLogo img {
   max-height: 120px;
+}
+.clearList {
+  display: flex;
+  position: relative;
+  top: 4px;
+}
+.clearListButton {
+  position: relative;
+  top: -10px;
+  height: 80px;
+  margin: 0 0 15px 40px;
+  font-size: .8rem;
+  text-align: center;
+}
+
+.clearListButton img {
+ height: 100%;
+  width: 100px;
+}
+
+.clearListButton img:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+
+.clearListButton p {
+  margin: 0;
+  font-weight: bold;
 }
