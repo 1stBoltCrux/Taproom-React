@@ -6,8 +6,6 @@ import KegList from './KegList.jsx';
 import AddKeg from './AddKeg.jsx';
 import { v4 } from 'uuid';
 
-
-
 class App extends React.Component {
   constructor(props){
     super(props);
@@ -80,7 +78,9 @@ class App extends React.Component {
     this.handleNewKeg = this.handleNewKeg.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.handleSubmitEditForm = this.handleSubmitEditForm.bind(this);
+    this.handleSellPint = this.handleSellPint.bind(this);
   }
+
   handleNewKeg(newKeg){
     console.log(newKeg);
     let newMasterKegList = this.state.masterKegList.slice();
@@ -113,13 +113,27 @@ class App extends React.Component {
     }
   }
 
+  handleSellPint(id){
+    let newMasterKegList = this.state.masterKegList.slice();
+    for (let i = 0; i < newMasterKegList.length; i++) {
+      if ( newMasterKegList[i].id === id) {
+        newMasterKegList[i].remaining --;
+        console.log(newMasterKegList[i].remaining);
+        this.setState({masterKegList: newMasterKegList});
+      }
+    }
+  }
+
   render(){
     return (
       <div className={styles.appBackground}>
         <div className={styles.appWrapper}>
           <Header/>
           <Switch>
-            <Route exact path='/keglist' render={()=> <KegList onHandleSubmitEditForm={this.handleSubmitEditForm} passedState={this.state} onHandleClick={this.handleClick} />}/>
+            <Route exact path='/keglist' render={()=> <KegList          onHandleSubmitEditForm={this.handleSubmitEditForm}
+              passedState={this.state}
+              onHandleClick={this.handleClick}
+              onSellPint={this.handleSellPint}/>}/>
             <Route exact path='/addkeg' render={()=> <AddKeg onNewKeg={this.handleNewKeg}/>}/>
           </Switch>
         </div>

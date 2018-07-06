@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './sellbutton.css';
 
-export default function SellButton(){
+export default function SellButton(props){
   return(
-    <div className={styles.sellButtonWrapper}>
+    <div onClick={() => props.onSellPint(props.kegId)} className={styles.sellButtonWrapper}>
       <p>Sell a Pint</p>
     </div>
   );

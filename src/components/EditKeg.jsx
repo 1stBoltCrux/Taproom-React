@@ -25,7 +25,9 @@ export default function EditKeg(props) {
                                  description={props.description}
                                  abv={props.abv}
                                  price={props.price}
-                                 remaining={props.remaining}/>;
+                                 remaining={props.remaining}
+                                 />;
+
     } else {
       visibleContent = null;
     }

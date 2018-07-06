@@ -19,7 +19,8 @@ export default function KegList(props) {
           kegId={keg.id}
           onHandleSubmitEditForm={props.onHandleSubmitEditForm}
           passedState={props.passedState}
-          onHandleClick={props.onHandleClick}/>
+          onHandleClick={props.onHandleClick}
+          onSellPint={props.onSellPint}/>
 
       )}
 
