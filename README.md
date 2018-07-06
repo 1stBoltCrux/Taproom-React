@@ -16,7 +16,9 @@ I have definitely found React's data-flow structure to be a lot more forgiving t
 
 ## App Component Structure
 
-<img src='./src/assets/images/structure.jpg'/>
+<img src='./src/assets/images/appMap.png'/>
+
+* Chart was revised to reflect structure more accurately. All state is contained within the App component and flows downward into its children. All other components are 'dumb' components using callbacks provided by App to alter state values. Components that use callbacks to 'lift' state are shown with a red arrow leading back to the App component.
 
 ## Setup/Installation Requirements
 

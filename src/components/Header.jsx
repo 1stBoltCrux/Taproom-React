@@ -22,7 +22,7 @@ export default function Header(props){
           <img src={xlogo} onClick={props.onClear}/>
 
       </div>
-        <p>Clear List</p>
+        <p>Clear<br/>List</p>
     </div>
     </div>
   );
