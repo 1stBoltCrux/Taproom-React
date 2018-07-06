@@ -49,31 +49,38 @@ a {
   max-height: 120px;
 }
 .clearList {
-  display: flex;
   position: relative;
-  top: 4px;
+  top: 2px;
+  display: flex;
+  align-items: center;
+  position: relative;
+
 }
 .clearListButton {
-  position: relative;
-  top: -10px;
-  height: 80px;
-  margin: 0 0 15px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
   font-size: .8rem;
   text-align: center;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: 50px;
+  box-shadow: 2px 2px 6px rgba(0,0,0, 0.5);
 }
 
 .clearListButton img {
- height: 100%;
-  width: 100px;
+ height: 45px
+
 }
 
-.clearListButton img:hover {
+.clearListButton:hover {
   cursor: pointer;
   transform: scale(1.03);
 }
 
 
-.clearListButton p {
-  margin: 0;
+.clearList p {
+  margin: 0 0 0 10px;
   font-weight: bold;
 }

@@ -20,8 +20,9 @@ export default function Header(props){
         </div>
         <div className={styles.clearListButton}>
           <img src={xlogo} onClick={props.onClear}/>
-          <p>Clear List</p>
+
       </div>
+        <p>Clear List</p>
     </div>
     </div>
   );
