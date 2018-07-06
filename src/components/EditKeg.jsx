@@ -18,8 +18,14 @@ export default function EditKeg(props) {
     let visibleContent = null;
     if (props.formVisible) {
       visibleContent = <EditForm onHandleClick={props.onHandleClick}
-      kegId={props.kegId}
-      onHandleSubmitEditForm={props.onHandleSubmitEditForm}/>;
+                                 kegId={props.kegId}
+                                 onHandleSubmitEditForm={props.onHandleSubmitEditForm}
+                                 name={props.name}
+                                 brewer={props.brewer}
+                                 description={props.description}
+                                 abv={props.abv}
+                                 price={props.price}
+                                 remaining={props.remaining}/>;
     } else {
       visibleContent = null;
     }

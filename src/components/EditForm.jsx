@@ -31,13 +31,13 @@ export default function EditForm(props){
               <li>Beer Name: <input
                 type='text'
                 id='name'
-                placeholder='Beer Name'
+                placeholder={props.name}
                 ref={(input) => {_name = input;}}/>
               </li>
               <li>Brewed by: <input
                 type='text'
                 id='brewer'
-                placeholder='Brewery Name'
+                placeholder={props.brewer}
                 ref={(input) => {_brewer = input;}}/>
               </li>
             </ul>
@@ -47,13 +47,13 @@ export default function EditForm(props){
               <li>Description:<input
                 type='text'
                 id='description'
-                placeholder='Description'
+                placeholder={props.description}
                 ref={(input) => {_description = input;}}/>
               </li>
               <li>ABV:<input
                 type='text'
                 id='abv'
-                placeholder='Alcohol By Volume'
+                placeholder={props.abv}
                 ref={(input) => {_abv = input;}}/>
               </li>
             </ul>
@@ -63,13 +63,13 @@ export default function EditForm(props){
               <li>Price:<input
                 type='text'
                 id='price'
-                placeholder='Price'
+                placeholder={props.price}
                 ref={(input) => {_price = input;}}/>
               </li>
               <li>Total Pints:<input
                 type='text'
                 id='remaining'
-                placeholder='Total Pints'
+                placeholder={props.remaining}
                 ref={(input) => {_remaining = input;}}/>
               </li>
             </ul>
