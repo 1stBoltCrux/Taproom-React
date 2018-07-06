@@ -90,7 +90,7 @@ class App extends React.Component {
   handleEditKeg(newEdit){
     console.log(newEdit);
     let newMasterKegList = this.state.masterKegList.slice();
-    for (i = 0; i < newMasterKegList.length; i++) {
+    for (let i = 0; i < newMasterKegList.length; i++) {
       if ( newMasterKegList[i].id === newEdit.id) {
         newMasterKegList[i] = newEdit
         this.setState({masterKegList: newMasterKegList});
@@ -101,6 +101,16 @@ class App extends React.Component {
   }
   handleClick(id) {
     console.log(id);
+    let newMasterKegList = this.state.masterKegList.slice();
+    for (let i = 0; i < newMasterKegList.length; i++) {
+      console.log(newMasterKegList[i]);
+      if ( newMasterKegList[i].id === id) {
+        newMasterKegList[i].formVisible = true;
+        this.setState({masterKegList: newMasterKegList});
+      } else {
+        
+      }
+    }
   }
   render(){
     return (
