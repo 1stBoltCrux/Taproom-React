@@ -4,6 +4,7 @@ import styles from './app.css';
 import Header from './Header.jsx';
 import KegList from './KegList.jsx';
 import AddKeg from './AddKeg.jsx';
+import { v4 } from 'uuid';
 
 
 
@@ -19,7 +20,9 @@ class App extends React.Component {
           description: 'Sparkling Wine & Grapefruit',
           abv: '6.8%',
           price: '7',
-          remaining: '20'
+          remaining: '20',
+          id: v4(),
+          formVisible: false
         },
         {
           name: 'Tart N Juicy',
@@ -27,7 +30,9 @@ class App extends React.Component {
           description: 'Sour IPA',
           abv: '4.5%',
           price: '6',
-          remaining: '60'
+          remaining: '60',
+          id: v4(),
+          formVisible: false
         },
         {
           name: 'Hamm\'s',
@@ -35,7 +40,9 @@ class App extends React.Component {
           description: 'American Lager',
           abv: '4.7%',
           price: '3',
-          remaining: '65'
+          remaining: '65',
+          id: v4(),
+          formVisible: false
         },
         {
           name: 'Prismatic',
@@ -43,7 +50,9 @@ class App extends React.Component {
           description: 'Juicy IPA',
           abv:  '5.9%',
           price: '6',
-          remaining: '75'
+          remaining: '75',
+          id: v4(),
+          formVisible: false
         },
         {
           name: 'Juicy Haze',
@@ -51,7 +60,9 @@ class App extends React.Component {
           description: 'India Pale Ale',
           abv:  '7.5%',
           price: '6',
-          remaining: '18'
+          remaining: '18',
+          id: v4(),
+          formVisible: false
         },
         {
           name: '8 Hop',
@@ -59,11 +70,16 @@ class App extends React.Component {
           description: 'Pale Ale',
           abv:  '5.5%',
           price: '6',
-          remaining: '58'
+          remaining: '58',
+          id: v4(),
+          formVisible: false
         }
-      ]
-    }
+      ],
+
+    };
     this.handleNewKeg = this.handleNewKeg.bind(this);
+    this.handleEditKeg = this.handleEditKeg.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
   handleNewKeg(newKeg){
     console.log(newKeg);
@@ -71,19 +87,34 @@ class App extends React.Component {
     newMasterKegList.push(newKeg);
     this.setState({masterKegList: newMasterKegList});
   }
-render(){
-  return (
-    <div className={styles.appBackground}>
-      <div className={styles.appWrapper}>
-        <Header/>
-        <Switch>
-          <Route exact path='/keglist' render={()=> <KegList passedState={this.state} />}/>
-          <Route exact path='/addkeg' render={()=> <AddKeg onNewKeg={this.handleNewKeg}/>}/>
-        </Switch>
+  handleEditKeg(newEdit){
+    console.log(newEdit);
+    let newMasterKegList = this.state.masterKegList.slice();
+    for (i = 0; i < newMasterKegList.length; i++) {
+      if ( newMasterKegList[i].id === newEdit.id) {
+        newMasterKegList[i] = newEdit
+        this.setState({masterKegList: newMasterKegList});
+      } else {
+        return '';
+      }
+    }
+  }
+  handleClick(id) {
+    console.log(id);
+  }
+  render(){
+    return (
+      <div className={styles.appBackground}>
+        <div className={styles.appWrapper}>
+          <Header/>
+          <Switch>
+            <Route exact path='/keglist' render={()=> <KegList onEditKeg={this.handleEditKeg} passedState={this.state} onHandleClick={this.handleClick} />}/>
+            <Route exact path='/addkeg' render={()=> <AddKeg onNewKeg={this.handleNewKeg}/>}/>
+          </Switch>
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
 
 }
 

@@ -5,8 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open",
-    "lint": "eslint src/*.jsx src/**/**; exit 0",
-    "lint-fix": "eslint src/*.jsx src/**/** --fix; exit 0"
+    "lint": "eslint src/*.jsx src/**/**;",
+    "lint-fix": "eslint src/*.jsx src/**/** --fix;"
   },
   "author": "",
   "license": "ISC",
@@ -24,7 +24,7 @@
     "babel-preset-react": "^6.24.1",
     "css": "^2.2.3",
     "css-loader": "^0.28.11",
-    "eslint": "^5.0.0",
+    "eslint": "^5.0.1",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-react": "^7.10.0",
     "file-loader": "^1.1.11",

@@ -4,7 +4,7 @@ import SellButton from './SellButton.jsx';
 import EditKeg from './EditKeg.jsx';
 import PropTypes from 'prop-types';
 import styles from './keg.css';
-console.log(styles);
+
 
 export default function Keg(props){
   return(
@@ -28,20 +28,20 @@ export default function Keg(props){
               <li><span className={styles.emphasis}>${props.price}</span></li>
               <li>Pints Remaining: <span className={styles.emphasis}>{props.remaining} </span></li>
             </ul>
-            </div>
-        </div>
-          <div className={styles.kegButtons}>
-            <ul>
-              <li><SellButton/></li>
-              <li><EditKeg/></li>
-            </ul>
-
           </div>
+        </div>
+        <div className={styles.kegButtons}>
+          <ul>
+            <li><SellButton/></li>
+            <li><EditKeg onKegEdit={props.onKegEdit} passedState={props.passedState} onHandleClick={props.onHandleClick} formVisible={props.formVisible} kegId={props.kegId}/></li>
+          </ul>
+
+        </div>
 
       </div>
 
     </div>
-  )
+  );
   Keg.PropTypes = {
     name: PropTypes.string,
     brewer: PropTypes.string,
@@ -49,5 +49,5 @@ export default function Keg(props){
     abv: PropTypes.string,
     price: PropTypes.string,
     remaining: PropTypes.string
-  }
+  };
 }

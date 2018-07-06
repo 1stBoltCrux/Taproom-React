@@ -2,7 +2,7 @@ import React from 'react';
 
 import logo from './../assets/images/logo.png';
 import {Link} from 'react-router-dom';
-import styles from './header.css'
+import styles from './header.css';
 
 export default function Header(){
   return(
@@ -18,5 +18,5 @@ export default function Header(){
       </div>
 
     </div>
-  )
+  );
 }

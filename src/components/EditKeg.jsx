@@ -1,39 +1,34 @@
 import React from 'react';
 import styles from './editkeg.css';
-import EditForm from './EditForm.jsx'
+import EditForm from './EditForm.jsx';
 
-export default class EditKeg extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      formVisible: false
-    }
-    this.handleClick = this.handleClick.bind(this);
+export default function EditKeg(props) {
+
+  function handleEditKegFormSubmit(event){
+    event.preventDefault();
+    props.onKegEdit({name: _name.value, brewer: _brewer.value, description: _description.value, abv: _abv.value, price: _price.value, remaining: _remaining.value, id: props.id});
+    _name.value = '';
+    _brewer.value = '';
+    _description.value = '';
+    _abv.value = '';
+    _price.value = '';
+    _remaining.value = '';
   }
 
-  handleClick() {
-    this.setState(prevState => ({
-      formVisible: !prevState.formVisible
-    }));
-  }
-
-  render(){
     let visibleContent = null;
-    if (this.state.formVisible) {
+    if (props.formVisible) {
       visibleContent = <EditForm handleClick={this.handleClick}/>;
     } else {
       visibleContent = null;
     }
-    console.log(visibleContent);
     return(
       <div className='edit-keg-wrapper'>
-        <div onClick={this.handleClick} className={styles.editButton}>
+        <div onClick={()=> props.onHandleClick(props.kegId)} className={styles.editButton}>
           <p>Edit</p>
 
         </div>
         {visibleContent}
       </div>
-    )
-  }
+    );
 
 }

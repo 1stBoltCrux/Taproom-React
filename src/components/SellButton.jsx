@@ -6,5 +6,5 @@ export default function SellButton(){
     <div className={styles.sellButtonWrapper}>
       <p>Sell a Pint</p>
     </div>
-  )
+  );
 }
